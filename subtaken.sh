@@ -13,6 +13,9 @@ done < ./wildcards_without_stars.txt
 
 
 cat ./*.out > all_subdomains.lst; 
-~/go/bin/SubOver -l ./all_subdomains.lst -timeout 5 -o subover.out;
+~/go/bin/SubOver -l ./all_subdomains.lst -timeout 5 >> subover.out;
+cd ~/
+
+subjack -w ~/Subtaken/all_subdomains.lst -t 1000 -o ~/Subtaken/subjack.out;
 
 python ~/Subtaken/notify.py

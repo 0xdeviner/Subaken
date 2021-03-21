@@ -42,6 +42,15 @@ go get github.com/Ice3man543/SubOver;
 cd ~/go/bin;
 wget https://raw.githubusercontent.com/Ice3man543/SubOver/master/providers.json; 
 cd ~/
+go get github.com/haccer/subjack
+
+mkdir $HOME/go/src
+mkdir $HOME/go/src/github.com
+mkdir $HOME/go/src/github.com/haccer
+mkdir $HOME/go/src/github.com/haccer/subjack
+cd $HOME/go/src/github.com/haccer/subjack
+wget https://raw.githubusercontent.com/haccer/subjack/master/fingerprints.json
+cd ~/
 
 source ~/.bashrc
 
