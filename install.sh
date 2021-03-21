@@ -16,6 +16,7 @@ sudo apt-get install git -y;
 sudo pip install discord-webhook;
 
 mkdir ~/Subtaken/subtakeover;
+mkdir ~/Subtaken/subtakeover;
 
 #install go
 echo "${red}Installing Golang${reset}"
