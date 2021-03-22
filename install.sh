@@ -37,6 +37,7 @@ echo "${green}Done...!!${reset}"
 
 cd ~/Subtaken/subtakeover;
 git clone https://github.com/arkadiyt/bounty-targets-data;
+git clone https://github.com/0xdeviner/Bug-Bounty-RDP.git;
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 go get github.com/Ice3man543/SubOver;
 cd ~/go/bin;
