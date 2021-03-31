@@ -9,13 +9,13 @@ dir=`pwd`;
 echo "${red}Pulling data!${reset}"
 cd ~/Subtaken/subtakeover/bounty-targets-data/; 
 git pull;
-cd ~/Subtaken/subtakeover/Bug-Bounty-RDP/;
-git pull;
+# cd ~/Subtaken/subtakeover/Bug-Bounty-RDP/;
+# git pull;
 echo "${green}done....!${reset}"
 cd $dir; 
 echo "${red}Gathering Targets!${reset}"
 cp ~/Subtaken/subtakeover/bounty-targets-data/data/wildcards.txt ./; cat wildcards.txt | sed 's/^*.//g' | grep -v '*' > wildcards_without_stars.txt; 
-cat ~/Subtaken/subtakeover/Bug-Bounty-RDP/programs.txt | tee -a wildcards_without_stars.txt;
+#cat ~/Subtaken/subtakeover/Bug-Bounty-RDP/programs.txt | tee -a wildcards_without_stars.txt;
 while read host; 
    do file=$host && file+="_subfinder.out"; 
    ~/go/bin/subfinder -o ~/Subtaken/subresults/$file -d $host; 
@@ -27,9 +27,10 @@ echo "${green}done....!${reset}"
 # SubOver -l ~/Subtaken/all_subdomains.lst -timeout 5 > ~/Subtaken/subover.out;
 # cd ~/
 echo "${red}Running Subjack!${reset}"
-subjack -w ~/Subtaken/all_subdomains.lst -t 1000 -o ~/Subtaken/subjack.out;
+subjack -w ~/Subtaken/all_subdomains.lst -t 100 -o ~/Subtaken/subjack.out;
 echo "${green}done....!${reset}"
+rm -rf ~/Subtaken/subresults
 
-echo "${red}Notifying!${reset}"
-python ~/Subtaken/notify.py
+echo "${red}Starting Subtaken again!${reset}"
+~/Subtaken/subtaken.sh
 echo "${green}done....!${reset}"
