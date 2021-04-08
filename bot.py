@@ -9,7 +9,7 @@ import time
 import asyncio
 
 # Edit the name of your base file
-BASE_FILE = 'subjack.out'
+BASE_FILE = 'subover.out'
 # Edit the delay you want between the check of notifications
 DELAY = 10
 

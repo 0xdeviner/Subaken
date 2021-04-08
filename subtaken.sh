@@ -22,13 +22,11 @@ while read host;
 done < ./wildcards_without_stars.txt
 echo "${green}done....!${reset}"
 
-# cat ~/Subtaken/subresults/*.out > all_subdomains.lst;
-# cd ~/go/bin 
-# SubOver -l ~/Subtaken/all_subdomains.lst -timeout 5 > ~/Subtaken/subover.out;
-# cd ~/
-echo "${red}Running Subjack!${reset}"
-subjack -w ~/Subtaken/all_subdomains.lst -t 100 -o ~/Subtaken/subjack.out;
-echo "${green}done....!${reset}"
+echo "${red}Started SubOver${reset}"
+cat ~/Subtaken/subresults/*.out > all_subdomains.lst;
+cd ~/go/bin 
+SubOver -l ~/Subtaken/all_subdomains.lst -timeout 5 > ~/Subtaken/subover.out;
+cd ~/
 rm -rf ~/Subtaken/subresults
 
 echo "${red}Starting Subtaken again!${reset}"
