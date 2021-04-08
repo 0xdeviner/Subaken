@@ -16,7 +16,7 @@ sudo apt-get install git -y;
 sudo pip install discord-webhook;
 
 mkdir ~/Subtaken/subtakeover;
-mkdir ~/Subtaken/subtakeover;
+
 
 #install go
 echo "${red}Installing Golang${reset}"
@@ -41,16 +41,7 @@ git clone https://github.com/0xdeviner/Bug-Bounty-RDP.git;
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 go get github.com/Ice3man543/SubOver;
 cd ~/go/bin;
-wget https://raw.githubusercontent.com/Ice3man543/SubOver/master/providers.json; 
-cd ~/
-go get github.com/haccer/subjack
-
-mkdir $HOME/go/src
-mkdir $HOME/go/src/github.com
-mkdir $HOME/go/src/github.com/haccer
-mkdir $HOME/go/src/github.com/haccer/subjack
-cd $HOME/go/src/github.com/haccer/subjack
-wget https://raw.githubusercontent.com/haccer/subjack/master/fingerprints.json
+wget https://raw.githubusercontent.com/0xdeviner/SubOver/master/providers.json; 
 cd ~/
 
 source ~/.bashrc
